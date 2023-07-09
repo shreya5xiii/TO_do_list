@@ -1,0 +1,152 @@
+body{
+    background-image: linear-gradient(rgb(27, 5, 42),rgb(18, 3, 49));
+    background-attachment:fixed;
+    color: antiquewhite;
+    animation: ex 5s;
+}
+
+#main{
+    background-color: rgba(255,255,255,0.2);
+    width: 600px;
+    height: 160px;
+    border-radius: 20px;
+    margin-left:27%;
+    margin-top: 150px;
+     position: fixed;
+     z-index: 20;
+     box-shadow: 0px 0px 20px black;
+
+}
+#h1{
+    text-align: center;
+}
+#input,#text{
+    width: 400px;
+    
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 50px;
+    background-color: rgba(255,255,255,0.2);
+    
+    font-size: 15px;
+    overflow: hidden;
+    color: antiquewhite;
+    padding: 0px 10px;
+}
+#input::placeholder{
+    color: rgb(169, 165, 165);
+    font-size: 15px;
+}
+#add,.del{
+    border: none;
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.2);
+    color: antiquewhite;
+    font-weight: bold;
+    margin-top: 15px;
+}
+#add:hover,.del:hover{
+    background-color: rgba(255,255,255,0.5);
+    transform: scale(1.1);
+}
+#main2{
+    width: 650px;
+    height: 300px;
+    margin-left:27%;
+    margin-top: 315px;
+    padding-top: 10px;
+   
+     position: fixed;
+     overflow-x: hidden;
+     z-index: 20;
+}
+::-webkit-scrollbar{
+    width:0px;
+}
+#display{
+    background-color: rgba(255,255,255,0.2);
+    display: flex;
+    width: 600px;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px black;
+}
+
+@media (max-width:650px){
+    #main{
+        width: 80%;
+        margin-left:10%;
+    }
+  
+    #input,#text{
+        width: 65%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+   
+    #add,.del{
+        width: 17%;
+    }
+    #main2{
+        width: 90%;
+        margin-left:10%;
+    }
+    #display{
+        width: 90%;
+    }
+
+   
+}
+@media (max-width:800px) and (min-width:650px){
+    #main{
+        width: 520px;
+        margin-left:15%;
+    }
+  
+    #input,#text{
+        width: 400px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+   
+    #add,.del{
+        width: 70px;
+    }
+    #main2{
+        width: 550px;
+        margin-left:15%;
+    }
+    #display{
+        width: 520px;
+    }
+}
+@media (max-width:1000px) and (min-width:800px){
+    #main{
+        width: 550px;
+        margin-left:22%;
+    }
+  
+    #input,#text{
+        width: 400px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+   
+    #add,.del{
+        width: 70px;
+    }
+    #main2{
+        width: 570px;
+        margin-left:22%;
+    }
+    #display{
+        width: 550px;
+    }
+   
+}
