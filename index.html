@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TO DO LIST</title>
+<link href="style.css" rel="stylesheet">
+</head>
+
+<div id="main">
+    <h1 id="h1">TO-DO LIST</h1>
+    <input type="text" id="input" placeholder="Write the task here...">
+    <button id="add" onclick="fun()">Add</button>
+    
+</div>
+<div id="main2">
+    
+</div>
+<script>
+     var a=0
+        function fun(){
+           
+        let d=document.createElement('div')
+        let i=document.createElement('input')
+        var b=document.createElement('button')
+        d.id='display'
+        i.id='text'
+        i.value=document.getElementById('input').value
+        b.className='del'
+        b.innerHTML="Delete"
+        d.insertAdjacentElement('afterbegin',b)
+        d.insertAdjacentElement('afterbegin',i)
+        document.getElementById('main2').appendChild(d)
+        document.getElementById('input').value=""
+        document.getElementsByClassName('del')[a].addEventListener('click',function(){
+            this.parentNode.remove()
+            a--
+        })
+        a++
+    }
+
+
+</script>
+</body>
+</html>
