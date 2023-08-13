@@ -20,15 +20,15 @@ body{
 #h1{
     text-align: center;
 }
-#input,#text{
-    width: 400px;
+#input,.text{
+    width: 450px;
     
     height: 50px;
     border: none;
     border-radius: 15px;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 50px;
+    margin: 10px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
     background-color: rgba(255,255,255,0.2);
     
     font-size: 15px;
@@ -55,7 +55,7 @@ body{
     transform: scale(1.1);
 }
 #main2{
-    width: 650px;
+    width: 600px;
     height: 300px;
     margin-left:27%;
     margin-top: 315px;
@@ -68,7 +68,7 @@ body{
 ::-webkit-scrollbar{
     width:0px;
 }
-#display{
+.display{
     background-color: rgba(255,255,255,0.2);
     display: flex;
     width: 600px;
@@ -84,7 +84,7 @@ body{
         margin-left:10%;
     }
   
-    #input,#text{
+    #input,.text{
         width: 65%;
         margin-right: 10px;
         margin-left: 10px;
@@ -97,7 +97,7 @@ body{
         width: 90%;
         margin-left:10%;
     }
-    #display{
+    .display{
         width: 90%;
     }
 
@@ -109,7 +109,7 @@ body{
         margin-left:15%;
     }
   
-    #input,#text{
+    #input,.text{
         width: 400px;
         margin-left: 10px;
         margin-right: 10px;
@@ -122,7 +122,7 @@ body{
         width: 550px;
         margin-left:15%;
     }
-    #display{
+    .display{
         width: 520px;
     }
 }
@@ -132,7 +132,7 @@ body{
         margin-left:22%;
     }
   
-    #input,#text{
+    #input,.text{
         width: 400px;
         margin-left: 10px;
         margin-right: 10px;
@@ -145,7 +145,7 @@ body{
         width: 570px;
         margin-left:22%;
     }
-    #display{
+    .display{
         width: 550px;
     }
    
