@@ -3,42 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>TO DO LIST</title>
+<title>html revise</title>
 <link href="style.css" rel="stylesheet">
 </head>
-
+<body>
 <div id="main">
     <h1 id="h1">TO-DO LIST</h1>
     <input type="text" id="input" placeholder="Write the task here...">
     <button id="add" onclick="fun()">Add</button>
-    
 </div>
 <div id="main2">
     
 </div>
 <script>
-     var a=0
-        function fun(){
-           
+
+   function fun(){
+      var text=document.getElementById('input').value
+      if(localStorage.getItem('data')==null){
+        localStorage.setItem('data','[]')
+      }
+      var old=JSON.parse(localStorage.getItem('data'))
+      old.push(text)
+      localStorage.setItem('data',JSON.stringify(old))
+      save()
+ 
+   }
+   save()
+   function save(){
+        document.getElementById('main2').innerHTML=''
+        for(let j of eval( localStorage.getItem('data'))){
+       
         let d=document.createElement('div')
         let i=document.createElement('input')
         var b=document.createElement('button')
-        d.id='display'
-        i.id='text'
-        i.value=document.getElementById('input').value
+        d.className='display'
+        i.className='text'
+        i.value=j
         b.className='del'
         b.innerHTML="Delete"
         d.insertAdjacentElement('afterbegin',b)
         d.insertAdjacentElement('afterbegin',i)
         document.getElementById('main2').appendChild(d)
         document.getElementById('input').value=""
-        document.getElementsByClassName('del')[a].addEventListener('click',function(){
-            this.parentNode.remove()
-            a--
-        })
-        a++
-    }
+       b.addEventListener('click',()=>{
+        let lis=eval(localStorage.getItem('data'))
+       lis.splice(lis.indexOf(j),1)
+        localStorage.setItem('data',JSON.stringify(lis))
+       save()
 
+      })
+  }}
 
 </script>
 </body>
